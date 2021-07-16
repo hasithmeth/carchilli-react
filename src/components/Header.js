@@ -50,15 +50,14 @@ export default function Header() {
 			</div>
 			<div className={ menuOpen ?
 				styles.dropDownMobile :
-				styles.dropDownMobileHidden }
-			     onClick={ () => setMenuOpen(false) }>
+				styles.dropDownMobileHidden }>
 				<RouteLink to={ "/" }>
 					<div
 						className={
 							location.pathname === "/"
 								? styles.selectedDropItemMobile
 								: styles.dropItemMobile
-						}
+						} onClick={ () => setMenuOpen(false) }
 					>
 						Home
 					</div>
@@ -69,7 +68,7 @@ export default function Header() {
 							location.pathname === "/becomeGuest"
 								? styles.selectedDropItemMobile
 								: styles.dropItemMobile
-						}
+						} onClick={ () => setMenuOpen(false) }
 					>
 						Become A Guest
 					</div>
@@ -80,7 +79,7 @@ export default function Header() {
 							location.pathname === "/becomeHost"
 								? styles.selectedDropItemMobile
 								: styles.dropItemMobile
-						}
+						} onClick={ () => setMenuOpen(false) }
 					>
 						Become A Host
 					</div>
