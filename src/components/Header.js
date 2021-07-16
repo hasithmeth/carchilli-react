@@ -48,6 +48,45 @@ export default function Header() {
 					<FaBars size={ 25 } color={ "black" }/>
 				) }
 			</div>
+			<div className={ menuOpen ?
+				styles.dropDownMobile :
+				styles.dropDownMobileHidden }
+			     onClick={ () => setMenuOpen(false) }>
+				<RouteLink to={ "/" }>
+					<div
+						className={
+							location.pathname === "/"
+								? styles.selectedDropItemMobile
+								: styles.dropItemMobile
+						}
+					>
+						Home
+					</div>
+				</RouteLink>
+				<RouteLink to={ "/becomeGuest" }>
+					<div
+						className={
+							location.pathname === "/becomeGuest"
+								? styles.selectedDropItemMobile
+								: styles.dropItemMobile
+						}
+					>
+						Become A Guest
+					</div>
+				</RouteLink>
+				<RouteLink to={ "/becomeHost" }>
+					<div
+						className={
+							location.pathname === "/becomeHost"
+								? styles.selectedDropItemMobile
+								: styles.dropItemMobile
+						}
+					>
+						Become A Host
+					</div>
+				</RouteLink>
+			</div>
+
 		</div>
 	);
 
