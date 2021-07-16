@@ -1,0 +1,155 @@
+.container {
+    font-family: 'Inter', sans-serif;
+}
+
+Link {
+    text-decoration: none;
+}
+
+.header {
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    background: #f2f2f2;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mobileHeader {
+    background: #f2f2f2;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.mobileLogo {
+    width: 200px;
+    animation: fadeIn 2s;
+}
+
+.mobileLogoImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        padding-top: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hamburger {
+    animation: none;
+}
+
+.dropDown {
+    border-top: 2px solid red;
+    border-radius: 5px;
+    padding: 20px 10px 10px;
+    width: 150px;
+    background: #fff;
+    position: absolute;
+    margin-top: 0px;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.27);
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 200ms;
+}
+
+.dropItem {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    color: black;
+}
+
+.dropItem:hover {
+    background: #f2f2f2;
+    color: #d63132;
+}
+
+.dropDownHidden {
+    visibility: hidden;
+    padding: 10px;
+    width: 150px;
+    background: #fff;
+    position: absolute;
+    margin-top: 20px;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.27);
+}
+
+.loginBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2.5rem;
+    padding-right: 5rem;
+}
+
+.loginText {
+    font-weight: bold;
+    /*padding-left: 2rem;*/
+    color: black;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.loginText:hover {
+    color: #d63132;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.menuText {
+    padding-left: 2rem;
+    color: black;
+}
+
+.menuText:hover,
+.menuTextFirstItem:hover {
+    color: #d63132;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menuTextFirstItem {
+    padding-left: 0;
+    color: black;
+}
+
+.selectedMenuText {
+    padding-left: 2rem;
+    color: #d63132;
+    cursor: pointer;
+}
+
+.selectedMenuTextFirstItem {
+    color: #d63132;
+}
+
+.logo {
+    display: flex;
+    height: 7rem;
+    width: 7rem;
+}
